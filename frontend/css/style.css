@@ -66,3 +66,25 @@ h1 {
 .container input[type="submit"]:hover {
     background-color: #45a049;
 }
+#btns{
+    text-align: center;
+    gap: 10px;
+}
+#register-btn{
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 20%;
+    font-size: 24px;
+}
+#register-btn:hover{
+    background-color: #4CAF50;
+}
+#login-btn{
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 20%;
+    font-size: 24px;
+}
+#login-btn:hover{
+    background-color: #4CAF50;
+}
