@@ -1,90 +1,163 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', serif; /* Classic font for a cozy feel */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #e6f7ff; /* Soft winter blue background */
+    color: #333; /* Dark gray for text */
+    background-image: url('https://i.ibb.co/pXK68T3/christmas-snow-gif-2.gif'); /* Adjust the path as needed */
+    background-repeat: no-repeat; /* Repeat the image to cover the entire background */
+    background-size: cover;
 }
 
-/* Styling for the main header */
+/* Main Heading */
 h1 {
     text-align: center;
     margin: 20px 0;
-    font-size: 36px;
+    font-size: 48px;
+    color: #1e90ff; /* Bright blue */
+    text-shadow: 2px 2px 5px rgba(30, 144, 255, 0.5), 0 0 20px rgba(30, 144, 255, 0.3); /* Glowing effect */
 }
 
-/* Basic styling for form containers */
+/* Container Styles */
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    border: 2px solid #003366; /* Dark blue border */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: #4b5379d5; /* Dark slate gray for contrast */
+    transition: all 0.3s ease;
 }
 
-/* Form title styling */
+/* Container Headings */
 .container h2 {
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: 36px;
     text-align: center;
+    color: #1e90ff; /* Bright blue for headings */
+    text-shadow: 1px 1px 5px rgba(30, 144, 255, 0.5); /* Subtle glow effect */
 }
 
-/* Styling for form fields */
+/* Labels */
 .container label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: #3e3e3e; /* Dark gray for labels */
 }
 
+/* Input Fields and Textarea */
 .container input[type="text"],
+.container input[type="password"],
 .container textarea,
 .container input[type="submit"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 2px solid #b3b3b3; /* Light gray border */
+    border-radius: 6px;
     font-size: 16px;
     box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff; /* White for input fields for contrast */
+    color: #333; /* Dark gray for input text */
 }
 
-/* Styling for textarea field */
+/* Input Focus Effect */
+.container input[type="text"]:focus,
+.container input[type="password"]:focus,
+.container textarea:focus {
+    border-color: #1e90ff; /* Bright blue on focus */
+    outline: none;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5); /* Glowing effect */
+}
+
+/* Textarea */
 .container textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-/* Submit button specific styling */
-.container input[type="submit"] {
-    background-color: #4CAF50;
+/* Submit Button */
+.container input[type="submit"],
+button {
+    background-color: #1e90ff; /* Bright blue for buttons */
     color: white;
     cursor: pointer;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    position: relative; /* For the pseudo-element */
 }
 
-/* Hover effect for submit button */
-.container input[type="submit"]:hover {
-    background-color: #45a049;
+/* Submit Button Hover Effect */
+.container input[type="submit"]:hover,
+button:hover {
+    background-color: #00bfff; /* Lighter blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
-#btns{
+
+/* Add a glow effect on hover */
+.container input[type="submit"]:hover::after,
+button:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px; /* Match button border radius */
+    background: rgba(255, 255, 255, 0.2); /* Light white for a glow effect */
+    filter: blur(10px);
+    z-index: -1; /* Place behind the button */
+}
+
+/* Style for button text */
+button {
+    font-size: 20px;
     text-align: center;
-    gap: 10px;
+    margin: 10px;
+    display: inline-block;
+    padding: 15px 25px;
+    letter-spacing: 1px; /* Space out letters for a more elegant look */
+    text-transform: uppercase; /* Uppercase text for buttons */
 }
-#register-btn{
-    background-color: white;
-    border: 2px solid #4CAF50;
-    border-radius: 20%;
-    font-size: 24px;
+
+/* Additional styling for active state */
+.container input[type="submit"]:active,
+button:active {
+    transform: translateY(0); /* Button goes back down on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Deeper shadow on click */
 }
-#register-btn:hover{
-    background-color: #4CAF50;
+
+/* Posts Styles */
+.post {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #1e90ff; /* Bright blue border */
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    transition: box-shadow 0.3s ease;
 }
-#login-btn{
-    background-color: white;
-    border: 2px solid #4CAF50;
-    border-radius: 20%;
-    font-size: 24px;
+
+/* Post Hover Effect */
+.post:hover {
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3); /* Soft shadow on hover */
 }
-#login-btn:hover{
-    background-color: #4CAF50;
+
+/* Align Buttons Center */
+#btns {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 20px 0;
+    color: #3e3e3e; /* Dark gray for footer */
 }
